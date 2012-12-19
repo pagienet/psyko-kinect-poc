@@ -1,0 +1,180 @@
+﻿'KungFuPainting.exe' (Win32): Loaded 'D:\Workspace\projects\cpp\KungFuPainting\Debug\KungFuPainting.exe'. Symbols loaded.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ntdll.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\kernel32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\KernelBase.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\d3d11.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcrt.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dxgi.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\user32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\gdi32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\lpk.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\usp10.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\advapi32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sechost.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\rpcrt4.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\sspicli.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cryptbase.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\version.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\dwmapi.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\Kinect10.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\winmm.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ole32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\oleaut32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp100.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcr100.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\setupapi.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cfgmgr32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\devobj.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\winusb.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\crypt32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msasn1.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\D3Dcompiler_46.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcp110d.dll'. Symbols loaded.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msvcr110d.dll'. Symbols loaded.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\imm32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\msctf.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\wintrust.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\uxtheme.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ole32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\ole32.dll'
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\aticfx32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\atiuxpag.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\igd10umd32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\atidxx32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\d3dx10_40.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\shell32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\shlwapi.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\shell32.dll'
+'KungFuPainting.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\shlwapi.dll'
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\d3d11sdklayers.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\clbcatq.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\WindowsCodecs.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cryptsp.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\rsaenh.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\userenv.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\profapi.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\gpapi.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\ncrypt.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\bcrypt.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\bcryptprimitives.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\cryptnet.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\Wldap32.dll'. Cannot find or open the PDB file.
+'KungFuPainting.exe' (Win32): Loaded 'C:\Windows\SysWOW64\SensApi.dll'. Cannot find or open the PDB file.
+The thread 0x11b4 has exited with code 0 (0x0).
+The thread 0x2b08 has exited with code 0 (0x0).
+The thread 0x2690 has exited with code 0 (0x0).
+The thread 0x1938 has exited with code 0 (0x0).
+The thread 0x223c has exited with code 0 (0x0).
+The thread 0x2e5c has exited with code 0 (0x0).
+The thread 0x21fc has exited with code 0 (0x0).
+The thread 0x1b68 has exited with code 0 (0x0).
+The thread 0x1544 has exited with code 0 (0x0).
+The thread 0x1f74 has exited with code 0 (0x0).
+The thread 0x2aec has exited with code 0 (0x0).
+The thread 0x1700 has exited with code 0 (0x0).
+'KungFuPainting.exe' (Win32): Unloaded 'C:\Windows\SysWOW64\WindowsCodecs.dll'
+D3D11: INFO: Destroy VertexShader: Name="D3DX11Effect", Addr=0x05FF3A1C [ STATE_CREATION INFO #2097251: DESTROY_VERTEXSHADER ]
+D3D11: INFO: Destroy PixelShader: Name="D3DX11Effect", Addr=0x05FF3E64 [ STATE_CREATION INFO #2097263: DESTROY_PIXELSHADER ]
+D3D11: INFO: Destroy VertexShader: Name="D3DX11Effect", Addr=0x05FF42C4 [ STATE_CREATION INFO #2097251: DESTROY_VERTEXSHADER ]
+D3D11: INFO: Destroy PixelShader: Name="D3DX11Effect", Addr=0x05FF470C [ STATE_CREATION INFO #2097263: DESTROY_PIXELSHADER ]
+D3D11: INFO: Destroy VertexShader: Name="D3DX11Effect", Addr=0x05FFBE4C [ STATE_CREATION INFO #2097251: DESTROY_VERTEXSHADER ]
+D3D11: INFO: Destroy PixelShader: Name="D3DX11Effect", Addr=0x05FFC274 [ STATE_CREATION INFO #2097263: DESTROY_PIXELSHADER ]
+D3D11: INFO: Destroy VertexShader: Name="D3DX11Effect", Addr=0x05FFCF8C [ STATE_CREATION INFO #2097251: DESTROY_VERTEXSHADER ]
+D3D11: INFO: Destroy PixelShader: Name="D3DX11Effect", Addr=0x05FFD3D4 [ STATE_CREATION INFO #2097263: DESTROY_PIXELSHADER ]
+The thread 0x2e28 has exited with code 0 (0x0).
+The thread 0x278c has exited with code 0 (0x0).
+The thread 0x1f58 has exited with code 0 (0x0).
+The thread 0x2450 has exited with code 0 (0x0).
+The thread 0x2494 has exited with code 0 (0x0).
+The thread 0xf84 has exited with code 0 (0x0).
+The thread 0x2060 has exited with code 0 (0x0).
+The thread 0x2c0c has exited with code 0 (0x0).
+The thread 0x1638 has exited with code 0 (0x0).
+The thread 0x1fcc has exited with code 0 (0x0).
+The thread 0x20a0 has exited with code 0 (0x0).
+The thread 0x1c28 has exited with code 0 (0x0).
+The thread 0x1ea8 has exited with code 0 (0x0).
+The thread 0x288c has exited with code 0 (0x0).
+The thread 0x226c has exited with code 0 (0x0).
+The thread 0x12e8 has exited with code 0 (0x0).
+The thread 0x2af4 has exited with code 0 (0x0).
+The thread 0xf38 has exited with code 0 (0x0).
+The thread 0x28ec has exited with code 0 (0x0).
+The thread 0x1dac has exited with code 0 (0x0).
+The thread 0x2fa8 has exited with code 0 (0x0).
+The thread 0x1db4 has exited with code 0 (0x0).
+The thread 0x27c0 has exited with code 0 (0x0).
+The thread 0x1f08 has exited with code 0 (0x0).
+The thread 0x2120 has exited with code 0 (0x0).
+The thread 0x150c has exited with code 0 (0x0).
+The thread 0x25f0 has exited with code 0 (0x0).
+The thread 0xc0c has exited with code 0 (0x0).
+The thread 0x2cf4 has exited with code 0 (0x0).
+D3D11: WARNING: Live Device: Name="unnamed", Addr=0x0082B218, ExtRef=7 [ STATE_CREATION WARNING #2097297: LIVE_DEVICE ]
+D3D11: WARNING: Live Texture2D: Name="unnamed", Addr=0x05FFE2EC, ExtRef=0, IntRef=1 [ STATE_CREATION WARNING #2097235: LIVE_TEXTURE2D ]
+D3D11: WARNING: Live InputLayout: Name="unnamed", Addr=0x05FFDC54, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097265: LIVE_INPUTLAYOUT ]
+D3D11: WARNING: Live Buffer: Name="unnamed", Addr=0x05FFDA34, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097229: LIVE_BUFFER ]
+D3D11: WARNING: Live Buffer: Name="unnamed", Addr=0x05FFD834, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097229: LIVE_BUFFER ]
+D3D11: WARNING: Live PixelShader: Name="D3DX11Effect", Addr=0x05FFCB74, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097262: LIVE_PIXELSHADER ]
+D3D11: WARNING: Live VertexShader: Name="D3DX11Effect", Addr=0x05FFC6D4, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097250: LIVE_VERTEXSHADER ]
+D3D11: WARNING: Live Buffer: Name="D3DX11Effect", Addr=0x05FFBADC, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097229: LIVE_BUFFER ]
+D3D11: WARNING: Live ShaderResourceView: Name="unnamed", Addr=0x05FF58E4, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097241: LIVE_SHADERRESOURCEVIEW ]
+D3D11: WARNING: Live Texture2D: Name="unnamed", Addr=0x05FF5684, ExtRef=0, IntRef=1 [ STATE_CREATION WARNING #2097235: LIVE_TEXTURE2D ]
+D3D11: WARNING: Live InputLayout: Name="unnamed", Addr=0x05FF540C, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097265: LIVE_INPUTLAYOUT ]
+D3D11: WARNING: Live Buffer: Name="unnamed", Addr=0x05FF4FBC, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097229: LIVE_BUFFER ]
+D3D11: WARNING: Live Buffer: Name="unnamed", Addr=0x05FF4D9C, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097229: LIVE_BUFFER ]
+D3D11: WARNING: Live PixelShader: Name="D3DX11Effect", Addr=0x05FF35BC, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097262: LIVE_PIXELSHADER ]
+D3D11: WARNING: Live VertexShader: Name="D3DX11Effect", Addr=0x05FF3174, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097250: LIVE_VERTEXSHADER ]
+D3D11: WARNING: Live Sampler: Name="D3DX11Effect", Addr=0x05FF2CB4, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097268: LIVE_SAMPLER ]
+D3D11: WARNING: Live Buffer: Name="D3DX11Effect", Addr=0x05FF273C, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097229: LIVE_BUFFER ]
+D3D11: WARNING: Live ShaderResourceView: Name="unnamed", Addr=0x05FB54AC, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097241: LIVE_SHADERRESOURCEVIEW ]
+D3D11: WARNING: Live Texture2D: Name="unnamed", Addr=0x05FB524C, ExtRef=0, IntRef=1 [ STATE_CREATION WARNING #2097235: LIVE_TEXTURE2D ]
+D3D11: WARNING: Live InputLayout: Name="unnamed", Addr=0x0082FB2C, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097265: LIVE_INPUTLAYOUT ]
+D3D11: WARNING: Live Buffer: Name="unnamed", Addr=0x0082F92C, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097229: LIVE_BUFFER ]
+D3D11: WARNING: Live Buffer: Name="unnamed", Addr=0x0082F5CC, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097229: LIVE_BUFFER ]
+D3D11: WARNING: Live PixelShader: Name="D3DX11Effect", Addr=0x0082E0DC, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097262: LIVE_PIXELSHADER ]
+D3D11: WARNING: Live VertexShader: Name="D3DX11Effect", Addr=0x0082DC5C, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097250: LIVE_VERTEXSHADER ]
+D3D11: WARNING: Live Buffer: Name="D3DX11Effect", Addr=0x0082D7BC, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097229: LIVE_BUFFER ]
+D3D11: WARNING: Live ShaderResourceView: Name="unnamed", Addr=0x05F53814, ExtRef=0, IntRef=0 [ STATE_CREATION WARNING #2097241: LIVE_SHADERRESOURCEVIEW ]
+D3D11: WARNING: Live ShaderResourceView: Name="textures/imp_d.jpg", Addr=0x05F523B4, ExtRef=1, IntRef=0 [ STATE_CREATION WARNING #2097241: LIVE_SHADERRESOURCEVIEW ]
+D3D11: WARNING: Live Texture2D: Name="textures/imp_d.jpg", Addr=0x05F52164, ExtRef=0, IntRef=2 [ STATE_CREATION WARNING #2097235: LIVE_TEXTURE2D ]
+D3D11: WARNING: Live DepthStencilView: Name="unnamed", Addr=0x05F4F124, ExtRef=1, IntRef=0 [ STATE_CREATION WARNING #2097247: LIVE_DEPTHSTENCILVIEW ]
+D3D11: WARNING: Live Texture2D: Name="unnamed", Addr=0x05F4EEF4, ExtRef=1, IntRef=1 [ STATE_CREATION WARNING #2097235: LIVE_TEXTURE2D ]
+D3D11: WARNING: Live RenderTargetView: Name="unnamed", Addr=0x05F4ED64, ExtRef=1, IntRef=0 [ STATE_CREATION WARNING #2097244: LIVE_RENDERTARGETVIEW ]
+D3D11: WARNING: Live Texture2D: Name="unnamed", Addr=0x05F4E95C, ExtRef=0, IntRef=1 [ STATE_CREATION WARNING #2097235: LIVE_TEXTURE2D ]
+D3D11: WARNING: Live Query: Name="unnamed", Addr=0x05F4E56C, ExtRef=0, IntRef=1 [ STATE_CREATION WARNING #2097280: LIVE_QUERY ]
+D3D11: WARNING: Live Sampler: Name="D3DX11Effect", Addr=0x05F4E3CC, ExtRef=0, IntRef=1 [ STATE_CREATION WARNING #2097268: LIVE_SAMPLER ]
+D3D11: WARNING: Live RasterizerState: Name="unnamed", Addr=0x05F4E244, ExtRef=0, IntRef=1 [ STATE_CREATION WARNING #2097277: LIVE_RASTERIZERSTATE ]
+D3D11: WARNING: Live DepthStencilState: Name="unnamed", Addr=0x05F4E0EC, ExtRef=0, IntRef=1 [ STATE_CREATION WARNING #2097274: LIVE_DEPTHSTENCILSTATE ]
+D3D11: WARNING: Live BlendState: Name="unnamed", Addr=0x05F4DFF4, ExtRef=0, IntRef=1 [ STATE_CREATION WARNING #2097271: LIVE_BLENDSTATE ]
+D3D11: WARNING: Live Context: Name="unnamed", Addr=0x05F4006C, ExtRef=1, IntRef=1 [ STATE_CREATION WARNING #2097226: LIVE_CONTEXT ]
+D3D11: WARNING: Live Device Child Summary: Device Addr=0x0082B218
+Using ID3D11Debug::ReportLiveDeviceObjects with D3D11_RLDO_DETAIL will help drill into object lifetimes. Objects with ExtRef=0 and IntRef=0 will be eventually destroyed through typical Immediate Context usage. However, if the application requires these objects to be destroyed sooner, ClearState followed by Flush on the Immediate Context will realize their destruction.
+Live              Context:      1
+Live               Buffer:      9
+Live            Texture1D:      0
+Live            Texture2D:      6
+Live            Texture3D:      0
+Live   ShaderResourceView:      4
+Live     RenderTargetView:      1
+Live     DepthStencilView:      1
+Live         VertexShader:      3
+Live       GeometryShader:      0
+Live          PixelShader:      3
+Live          InputLayout:      3
+Live              Sampler:      2
+Live           BlendState:      1
+Live    DepthStencilState:      1
+Live      RasterizerState:      1
+Live                Query:      1
+Live            Predicate:      0
+Live              Counter:      0
+Live          CommandList:      0
+Live           HullShader:      0
+Live         DomainShader:      0
+Live        ClassInstance:      0
+Live         ClassLinkage:      0
+Live        ComputeShader:      0
+Live  UnorderedAccessView:      0
+ [ STATE_CREATION WARNING #2097298: LIVE_OBJECT_SUMMARY ]
+The program '[11256] KungFuPainting.exe' has exited with code 0 (0x0).

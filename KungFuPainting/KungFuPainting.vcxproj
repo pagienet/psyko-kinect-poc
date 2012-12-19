@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{958D33DD-09A4-464F-8AD8-5C768FFAB07A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>KungFuPainting</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(KINECTSDK_DIR)\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(KINECTSDK_DIR)\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(KINECTSDK_DIR)\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(KINECTSDK_DIR)\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;$(ProjectDir)include;$(ProjectDir)dx</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)libs\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;Kinect10.lib;D3DX11EffectsD.lib;D3DCompiler.lib;dxgi.lib;dxguid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy /e /y  "$(ProjectDir)resources" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;$(ProjectDir)include;$(ProjectDir)dx</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)libs\;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d11.lib;Kinect10.lib;D3DX11Effects.lib;D3DCompiler.lib;dxgi.lib;dxguid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /e /y  "$(ProjectDir)resources" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\poc\SimplePaintLogic.cpp" />
+    <ClCompile Include="src\poc\PlaneMesh.cpp" />
+    <ClCompile Include="src\poc\Painting.cpp" />
+    <ClCompile Include="src\poc\JointMesh.cpp" />
+    <ClCompile Include="src\kinect\KinectMeshAnimator.cpp" />
+    <ClCompile Include="src\skeleton\SkeletonMeshController.cpp" />
+    <ClCompile Include="src\poc\MonsterMaterial.cpp" />
+    <ClCompile Include="src\io\MD5Parser.cpp" />
+    <ClCompile Include="src\skeleton\Skeleton.cpp" />
+    <ClCompile Include="src\kinect\KinectDepthDisplay.cpp" />
+    <ClCompile Include="src\kinect\KinectDisplay.cpp" />
+    <ClCompile Include="src\render\DrawDepthMaterial.cpp" />
+    <ClCompile Include="src\render\DrawRectMaterial.cpp" />
+    <ClCompile Include="dx\WICTextureLoader.cpp" />
+    <ClCompile Include="src\kinect\KinectColorDisplay.cpp" />
+    <ClCompile Include="src\kinect\KinectController.cpp" />
+    <ClCompile Include="src\render\MeshInstance.cpp" />
+    <ClCompile Include="src\render\Material.cpp" />
+    <ClCompile Include="src\render\Mesh.cpp" />
+    <ClCompile Include="src\KungFuPOC.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\core\Win32DirectXApplication.cpp" />
+    <ClCompile Include="src\utils\PrecisionTimer.cpp" />
+    <ClCompile Include="src\render\Texture2D.cpp" />
+    <ClCompile Include="src\poc\TestMaterial.cpp" />
+    <ClCompile Include="src\poc\StickFigureMesh.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\poc\JointMesh.h" />
+    <ClInclude Include="include\core\math.h" />
+    <ClInclude Include="include\kinect\KinectDepthDisplay.h" />
+    <ClInclude Include="include\render\DrawDepthMaterial.h" />
+    <ClInclude Include="include\render\DrawRectMaterial.h" />
+    <ClInclude Include="dx\WICTextureLoader.h" />
+    <ClInclude Include="include\core\debug.h" />
+    <ClInclude Include="include\core\Vertex.h" />
+    <ClInclude Include="include\core\Win32DirectXApplication.h" />
+    <ClInclude Include="include\error\errorcodes.h" />
+    <ClInclude Include="include\KungFuPOC.h" />
+    <ClInclude Include="include\utils\PrecisionTimer.h" />
+    <ClInclude Include="include\render\Mesh.h" />
+    <ClInclude Include="include\render\Material.h" />
+    <ClInclude Include="include\render\MeshInstance.h" />
+    <ClInclude Include="include\render\Texture2D.h" />
+    <ClInclude Include="include\poc\TestMaterial.h" />
+    <ClInclude Include="include\kinect\KinectController.h" />
+    <ClInclude Include="include\kinect\KinectColorDisplay.h" />
+    <ClInclude Include="include\kinect\KinectDisplay.h" />
+    <ClInclude Include="include\skeleton\Skeleton.h" />
+    <ClInclude Include="include\io\MD5Parser.h" />
+    <ClInclude Include="include\poc\MonsterMaterial.h" />
+    <ClInclude Include="include\skeleton\SkeletonMeshController.h" />
+    <ClInclude Include="include\kinect\KinectMeshAnimator.h" />
+    <ClInclude Include="include\poc\Painting.h" />
+    <ClInclude Include="include\poc\PlaneMesh.h" />
+    <ClInclude Include="include\poc\JointPaintLogic.h" />
+    <ClInclude Include="include\poc\SimplePaintLogic.h" />
+    <ClInclude Include="include\poc\StickFigureMesh.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
