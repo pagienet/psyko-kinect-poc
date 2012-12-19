@@ -12,12 +12,14 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow
 #endif
 	application.SetWindowTitle(L"Kung Fu Paint POC");
 	int code = application.Init(hInstance, pCmdLine, nCmdShow);
+	
 	if (code) {
 		std::stringstream str;
 		str << "Initialization failed with error code: 0x" << std::hex << code;
 		Alert(str.str());
 		return code;
 	}
+	
 	code = application.Run();
 	
 	if (code) {	

@@ -47,15 +47,13 @@ namespace psyko
 		unsigned int msaaQualityLevels;
 		D3D_FEATURE_LEVEL featureLevel;
 
-		
-
-		void InitWindow(PWSTR pCmdLine, int nCmdShow);
-		void InitDirect3D();
-		void CreateDeviceAndContext();
+		int InitWindow(PWSTR pCmdLine, int nCmdShow);
+		int InitDirect3D();
+		int CreateDeviceAndContext();
 		void InitMSAA();
-		void InitSwapChain();
-		void InitRenderTargetView();
-		void InitDepthAndStencil();
+		int InitSwapChain();
+		int InitRenderTargetView();
+		int InitDepthAndStencil();
 		DXGI_SWAP_CHAIN_DESC CreateSwapChainDescriptor();
 		D3D11_TEXTURE2D_DESC CreateDepthStencilTextureDescriptor();
 	};

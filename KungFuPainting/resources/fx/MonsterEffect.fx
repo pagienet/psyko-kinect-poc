@@ -40,7 +40,7 @@ technique11 TextureTech
 {
 	pass P0
 	{
-		SetVertexShader(CompileShader(vs_5_0, VS()));
-		SetPixelShader(CompileShader(ps_5_0, PS()));
+		SetVertexShader(CompileShader(vs_4_0, VS()));
+		SetPixelShader(CompileShader(ps_4_0, PS()));
 	}
 }

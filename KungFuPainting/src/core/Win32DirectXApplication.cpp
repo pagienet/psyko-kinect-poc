@@ -71,8 +71,10 @@ namespace psyko
 	int Win32DirectXApplication::Init(HINSTANCE hInstance, PWSTR pCmdLine, int nCmdShow)
 	{
 		this->hInstance = hInstance;
-		InitWindow(pCmdLine, nCmdShow);
-		InitDirect3D();
+		int code = InitWindow(pCmdLine, nCmdShow);
+		if (code) return code;
+		code = InitDirect3D();
+		if (code) return code;
 		return SetUp();
 	}
 
@@ -121,7 +123,7 @@ namespace psyko
 		}
 	}
 
-	void Win32DirectXApplication::InitWindow(PWSTR pCmdLine, int nCmdShow) 
+	int Win32DirectXApplication::InitWindow(PWSTR pCmdLine, int nCmdShow) 
 	{
 		const wchar_t CLASS_NAME[] = L"PsykoWindow";
 		
@@ -150,16 +152,22 @@ namespace psyko
 			this	// to be passed on in WM_CREATE so we can store pointer
 		);
 
-		if (hWnd) ShowWindow(hWnd, nCmdShow);
-		else exit(WINDOW_CREATION_FAILED);
+		if (!hWnd)
+			return WINDOW_CREATION_FAILED;
+
+		ShowWindow(hWnd, nCmdShow);
+		return 0;
 	}
 
-	void Win32DirectXApplication::InitDirect3D()
+	int Win32DirectXApplication::InitDirect3D()
 	{
-		CreateDeviceAndContext();
+		int code = CreateDeviceAndContext();
+		if (code) return code;
 		InitMSAA();
-		InitSwapChain();		
+		code = InitSwapChain();		
+		if (code) return code;
 		SetViewport(0, 0, (float)windowWidth, (float)windowHeight);
+		return 0;
 	}
 
 	void Win32DirectXApplication::InitMSAA()
@@ -196,7 +204,7 @@ namespace psyko
 			//SetViewport(0, 0, (float)windowWidth, (float)windowHeight);
 	}
 
-	void Win32DirectXApplication::CreateDeviceAndContext()
+	int Win32DirectXApplication::CreateDeviceAndContext()
 	{				
 		// todo: provide settings with driver type
 		// todo: provide different feature levels
@@ -205,21 +213,23 @@ namespace psyko
 		createDeviceFlags |= D3D11_CREATE_DEVICE_DEBUG;
 #endif
 		const int numFeatureLevels = 1;
-		D3D_FEATURE_LEVEL requestedFeatureLevels[] = { D3D_FEATURE_LEVEL_11_0, D3D_FEATURE_LEVEL_10_1, D3D_FEATURE_LEVEL_10_0 };
+		D3D_FEATURE_LEVEL requestedFeatureLevels[] = { D3D_FEATURE_LEVEL_10_1 };
 		HRESULT result = D3D11CreateDevice(0,  D3D_DRIVER_TYPE_HARDWARE,  0, createDeviceFlags, requestedFeatureLevels, sizeof(requestedFeatureLevels) / sizeof(D3D_FEATURE_LEVEL), D3D11_SDK_VERSION, &device, &featureLevel, &deviceContext);
 
 		if (FAILED(result))
-			exit (D3D_DEVICE_CONTEXT_CREATION_FAILED);
+			return D3D_DEVICE_CONTEXT_CREATION_FAILED;
 
 		bool found = false;
 		for (int i = 0; i < numFeatureLevels && !found; ++i)
 			found = featureLevel == requestedFeatureLevels[i];
 
 		if (!found)
-			exit (D3D_VERSION_NOT_SUPPORTED);
+			return D3D_VERSION_NOT_SUPPORTED;
+
+		return 0;
 	}
 	
-	void Win32DirectXApplication::InitSwapChain()
+	int Win32DirectXApplication::InitSwapChain()
 	{
 		DXGI_SWAP_CHAIN_DESC swapChainDesc = CreateSwapChainDescriptor();
 
@@ -231,19 +241,19 @@ namespace psyko
 
 		result = device->QueryInterface(__uuidof(IDXGIDevice), (void**)&dxgiDevice);
 		if (FAILED(result))
-			exit (D3D_QUERY_INTERFACE_FAILED);
+			return D3D_QUERY_INTERFACE_FAILED;
 		
 		result = dxgiDevice->GetParent(__uuidof(IDXGIAdapter), (void**)&dxgiAdapter);
 		if (FAILED(result)) {
 			dxgiDevice->Release();
-			exit (D3D_QUERY_INTERFACE_FAILED);
+			return D3D_QUERY_INTERFACE_FAILED;
 		}
 		
 		result = dxgiAdapter->GetParent(__uuidof(IDXGIFactory), (void**)&dxgiFactory);
 		if (FAILED(result)) {
 			dxgiDevice->Release();
 			dxgiAdapter->Release();
-			exit (D3D_QUERY_INTERFACE_FAILED);
+			return D3D_QUERY_INTERFACE_FAILED;
 		}
 		
 		result = dxgiFactory->CreateSwapChain(device, &swapChainDesc, &swapChain);
@@ -251,32 +261,38 @@ namespace psyko
 		dxgiAdapter->Release();
 		dxgiFactory->Release();
 		
-		if (FAILED(result)) {
-			exit (D3D_SWAP_CHAIN_CREATION_FAILED);
-		}
+		if (FAILED(result))
+			return D3D_SWAP_CHAIN_CREATION_FAILED;
 
-		InitRenderTargetView();
-		InitDepthAndStencil();
+		int code = InitRenderTargetView();
+		if (code) return code;
+		code = InitDepthAndStencil();
+		if (code) return code;
 		deviceContext->OMSetRenderTargets(1, &backBufferView, depthStencilView);
+
+		return 0;
 	}
 
-	void Win32DirectXApplication::InitRenderTargetView()
+	int Win32DirectXApplication::InitRenderTargetView()
 	{
 		swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)(&backBuffer));
-		device->CreateRenderTargetView(backBuffer, 0, &backBufferView);
+		HRESULT result = device->CreateRenderTargetView(backBuffer, 0, &backBufferView);
 		backBuffer->Release();
+		if (FAILED(result)) return D3D_BACKBUFFER_CREATION_FAILED;
+		return 0;
 	}
 
-	void Win32DirectXApplication::InitDepthAndStencil()
+	int Win32DirectXApplication::InitDepthAndStencil()
 	{
 		D3D11_TEXTURE2D_DESC textureDescriptor = CreateDepthStencilTextureDescriptor();
 		HRESULT result;
 
 		result = device->CreateTexture2D(&textureDescriptor, 0, &depthStencilBuffer);
-		if (FAILED(result)) exit (D3D_DEPTH_STENCIL_BUFFER_CREATION_FAILED);
+		if (FAILED(result)) return D3D_DEPTH_STENCIL_BUFFER_CREATION_FAILED;
 
 		result = device->CreateDepthStencilView(depthStencilBuffer, 0, &depthStencilView);
-		if (FAILED(result)) exit (D3D_DEPTH_STENCIL_BUFFER_CREATION_FAILED);
+		if (FAILED(result)) return D3D_DEPTH_STENCIL_BUFFER_CREATION_FAILED;
+		return 0;
 	}
 
 	DXGI_SWAP_CHAIN_DESC Win32DirectXApplication::CreateSwapChainDescriptor()

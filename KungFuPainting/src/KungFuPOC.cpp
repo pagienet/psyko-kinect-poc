@@ -140,13 +140,12 @@ namespace psyko
 		deviceContext->ClearDepthStencilView(depthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0, 0);
 		deviceContext->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 		  
-		colorDisplay->Draw();
-		depthDisplay->Draw();
-		painting->Render(deviceContext);
-
 		jointMaterial->SetProjectionMatrix(projection);
 		painting->SetProjectionMatrix(projection);
-		
+
+		colorDisplay->Draw();
+		depthDisplay->Draw();
+		painting->Render(deviceContext);		
 		meshInstance->Render(deviceContext);
 
 		swapChain->Present(0, 0);

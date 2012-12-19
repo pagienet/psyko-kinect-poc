@@ -36,22 +36,27 @@ namespace psyko
 	int KinectController::InitSensor()
 	{
 		HRESULT result = 0;
-		int sensorCount;
+		int sensorCount = 0;
 		result = NuiGetSensorCount(&sensorCount);
 		if (FAILED(result)) return NUI_SENSOR_QUERY_FAILED;
 		int i = 0;
 		int status = NUI_SENSOR_NOT_FOUND;
+		INuiSensor* potentialSensor = 0;
 
 		while (sensor == 0 && i < sensorCount) {
-			result = NuiCreateSensorByIndex(i, &sensor);
+			result = NuiCreateSensorByIndex(i, &potentialSensor);
 			
 			if (FAILED(result)) continue;
 			
-			if (sensor->NuiStatus() != S_OK) {
-				sensor->Release();
-				sensor = 0;
+			if (potentialSensor->NuiStatus() == S_OK) {
+				sensor = potentialSensor;
+			}
+			else {
+				potentialSensor->Release();
+				potentialSensor = 0;
 				status = NUI_SENSOR_NOT_AVAILABLE;
 			}
+
 			++i;
 		}
 

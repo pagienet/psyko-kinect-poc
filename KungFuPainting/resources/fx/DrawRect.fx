@@ -74,8 +74,8 @@ technique11 ColorTech
 {
 	pass P0
 	{
-		SetVertexShader(CompileShader(vs_5_0, VS()));
-		SetPixelShader(CompileShader(ps_5_0, PSColor()));
+		SetVertexShader(CompileShader(vs_4_0, VS()));
+		SetPixelShader(CompileShader(ps_4_0, PSColor()));
 	}
 }
 
@@ -83,8 +83,8 @@ technique11 DepthTech
 {
 	pass P0
 	{
-		SetVertexShader(CompileShader(vs_5_0, VS()));
-		SetPixelShader(CompileShader(ps_5_0, PSDepth()));
+		SetVertexShader(CompileShader(vs_4_0, VS()));
+		SetPixelShader(CompileShader(ps_4_0, PSDepth()));
 	}
 }
 
@@ -92,7 +92,7 @@ technique11 NormalsTech
 {
 	pass P0
 	{
-		SetVertexShader(CompileShader(vs_5_0, VS()));
-		SetPixelShader(CompileShader(ps_5_0, PSNormals()));
+		SetVertexShader(CompileShader(vs_4_0, VS()));
+		SetPixelShader(CompileShader(ps_4_0, PSNormals()));
 	}
 }
