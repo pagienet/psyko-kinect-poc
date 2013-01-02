@@ -1,7 +1,6 @@
 #include "poc/SimplePaintLogic.h"
 
 #include <math.h>
-#include <d3d11.h>
 #include "core/debug.h"
 #include "poc/PlaneMesh.h"
 
@@ -10,7 +9,7 @@ using namespace DirectX;
 namespace psyko
 {
 	SimplePaintLogic::SimplePaintLogic(Painting* painting, ID3D11Device* device, ID3D11DeviceContext* context)
-		: JointPaintLogic(painting), device(device), deviceContext(context), splotchInstance(0), splotchMesh(0), splotchMaterial(0), texture(0), blendState(0)
+		: JointPaintLogic(painting, device, context), splotchInstance(0), splotchMesh(0), splotchMaterial(0), texture(0), blendState(0)
 	{
 		D3D11_BLEND_DESC blendDesc;
 		ZeroMemory(&blendDesc, sizeof(blendDesc));
@@ -67,9 +66,6 @@ namespace psyko
 		float4 pos;
 		XMStoreFloat4(&pos, local);
 		
-		DEBUG_TRACE("Global position " << index << ": " << jointPositions[index].x << ", " << jointPositions[index].y << ", " << jointPositions[index].z);
-		DEBUG_TRACE("Local position " << index << ": " << pos.x << ", " << pos.y << ", " << pos.z);
-		
 		// make sure is close to canvas and limb is protruding
 		if (pos.z > 0.05 || dz < .25) return;
 
@@ -100,22 +96,17 @@ namespace psyko
 		planePoint = XMVector4Transform(planePoint, inversePaintingMatrix);
 		XMStoreFloat4(&pos, planePoint);
 		
-		DEBUG_TRACE("Intersection " << index << ": " << pos.x << ", " << pos.y << ", " << pos.z);
-
-		// t = ((planePoint - lineOrigin) . planeNormal) / (lineDir . planeNormal)
-
 		if (pos.x > -hw && pos.x < hw &&
 			pos.y > -hh && pos.y < hh)			  
 		{
 			pos.x /= hw;
 			pos.y /= hh;
 			float4x4 transform(
-				splotchSize, 0.0, 0.0, 0.0,
-				0.0, splotchSize, 0.0, 0.0,
-				0.0, 0.0, 1.0, 0.0,
-				pos.x - splotchSize*.5, pos.y - splotchSize*.5, 0.0, 1.0
+				splotchSize, 0.0f, 0.0f, 0.0f,
+				0.0f, splotchSize, 0.0f, 0.0f,
+				0.0f, 0.0f, 1.0f, 0.0f,
+				pos.x - splotchSize*.5f, pos.y - splotchSize*.5f, 0.0f, 1.0f
 			);
-			DEBUG_TRACE("Painting " << index);			
 			splotchInstance->SetTransformMatrix(transform);
 			
 			deviceContext->OMSetBlendState(blendState, 0, 0xffffffff);

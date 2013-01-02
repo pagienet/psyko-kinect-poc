@@ -23,10 +23,13 @@ namespace psyko
 		unsigned int GetTextureHeight() { return texture->GetHeight(); }
 		virtual void Render(ID3D11DeviceContext* deviceContext);
 
+		float GetZ() const { return z; }
+
 	private:
 		Texture2D* texture;
 		float width;
 		float height;
+		float z;
 
 		void InitTexture(ID3D11DeviceContext* context);
 		float4x4 inverseTransformMatrix;

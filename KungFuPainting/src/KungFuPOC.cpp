@@ -7,6 +7,7 @@
 #include "poc/MonsterMaterial.h"
 #include "poc/JointMesh.h"
 #include "poc/SimplePaintLogic.h"
+#include "poc/ThrowPaintLogic.h"
 #include "io/MD5Parser.h"
 
 using namespace DirectX;
@@ -115,10 +116,15 @@ namespace psyko
 
 	int KungFuPOC::InitPaintLogic()
 	{
-		SimplePaintLogic* simple = new SimplePaintLogic(painting, device, deviceContext);
-		paintLogics.push_back(simple);
-		simple->AddJoint(NUI_SKELETON_POSITION_HAND_LEFT);
-		simple->AddJoint(NUI_SKELETON_POSITION_HAND_RIGHT);
+		//SimplePaintLogic* simple = new SimplePaintLogic(painting, device, deviceContext);
+		ThrowPaintLogic* throwLogic = new ThrowPaintLogic(painting, device, deviceContext);
+		//simple->AddJoint(NUI_SKELETON_POSITION_HAND_LEFT);
+		//simple->AddJoint(NUI_SKELETON_POSITION_HAND_RIGHT);
+		throwLogic->AddJoint(NUI_SKELETON_POSITION_HAND_LEFT);
+		throwLogic->AddJoint(NUI_SKELETON_POSITION_HAND_RIGHT);
+
+		//paintLogics.push_back(simple);
+		paintLogics.push_back(throwLogic);
 		return 0;
 	}
 
@@ -130,16 +136,19 @@ namespace psyko
 		if (WaitForSingleObject(kinectController.ColorStreamEvent(), 0) == WAIT_OBJECT_0)
 			UpdateKinectColorData();
 
-		if (WaitForSingleObject(kinectController.SkeletonStreamEvent(), 0) == WAIT_OBJECT_0)
-			UpdateKinectSkeletonData();		
-
 		deviceContext->OMSetRenderTargets(1, &backBufferView, depthStencilView);
 		SetViewport(0, 0, (float)windowWidth, (float)windowHeight);
 
 		deviceContext->ClearRenderTargetView(backBufferView, backgroundColor);
 		deviceContext->ClearDepthStencilView(depthStencilView, D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0, 0);
 		deviceContext->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
-		  
+
+		if (WaitForSingleObject(kinectController.SkeletonStreamEvent(), 0) == WAIT_OBJECT_0)
+			UpdateKinectSkeletonData();		
+
+		deviceContext->OMSetRenderTargets(1, &backBufferView, depthStencilView);
+		SetViewport(0, 0, (float)windowWidth, (float)windowHeight);
+
 		jointMaterial->SetProjectionMatrix(projection);
 		painting->SetProjectionMatrix(projection);
 
@@ -191,8 +200,11 @@ namespace psyko
 		stickFigureMesh->Update(deviceContext, positions);
 
 		matrix4x4 projectionMtx = XMLoadFloat4x4(&projection);
-		for (auto it = paintLogics.begin(); it != paintLogics.end(); ++it)
+		for (auto it = paintLogics.begin(); it != paintLogics.end(); ++it) {
+			deviceContext->OMSetRenderTargets(1, &backBufferView, depthStencilView);
+			SetViewport(0, 0, (float)windowWidth, (float)windowHeight);
 			(*it)->Update(projectionMtx, deviceContext, positions);
+		}
 	}
 
 	void KungFuPOC::OnResize(unsigned int width, unsigned int height)

@@ -200,8 +200,10 @@ namespace psyko
 		this->windowWidth = width;
 		this->windowHeight = height;
 		// todo: resize backbuffer, then we can set viewport?
-		//if (deviceContext) 
-			//SetViewport(0, 0, (float)windowWidth, (float)windowHeight);
+		if (deviceContext) {
+			InitSwapChain();
+			SetViewport(0, 0, (float)windowWidth, (float)windowHeight);
+		}
 	}
 
 	int Win32DirectXApplication::CreateDeviceAndContext()
@@ -231,6 +233,11 @@ namespace psyko
 	
 	int Win32DirectXApplication::InitSwapChain()
 	{
+		if (swapChain) {
+			swapChain->Release();
+			swapChain  = 0;
+		}
+
 		DXGI_SWAP_CHAIN_DESC swapChainDesc = CreateSwapChainDescriptor();
 
 		// bunch of COM stuff to get the factory with which the device was created
@@ -275,6 +282,11 @@ namespace psyko
 
 	int Win32DirectXApplication::InitRenderTargetView()
 	{
+		if (backBufferView) {
+			backBufferView->Release();
+			backBufferView = 0;
+		}
+
 		swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), (void**)(&backBuffer));
 		HRESULT result = device->CreateRenderTargetView(backBuffer, 0, &backBufferView);
 		backBuffer->Release();
@@ -284,6 +296,17 @@ namespace psyko
 
 	int Win32DirectXApplication::InitDepthAndStencil()
 	{
+
+		if (depthStencilBuffer) {
+			depthStencilBuffer->Release();
+			depthStencilBuffer = 0;
+		}
+
+		if (depthStencilView) {
+			depthStencilView->Release();
+			depthStencilView = 0;
+		}
+
 		D3D11_TEXTURE2D_DESC textureDescriptor = CreateDepthStencilTextureDescriptor();
 		HRESULT result;
 

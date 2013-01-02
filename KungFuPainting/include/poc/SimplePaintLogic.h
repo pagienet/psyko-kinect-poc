@@ -21,8 +21,6 @@ namespace psyko
 		virtual void UpdateJoint(matrix4x4& projection, const Vector4* jointPositions, int index);
 		
 	private:
-		ID3D11Device* device;
-		ID3D11DeviceContext* deviceContext;
 		MeshInstance* splotchInstance;
 		Mesh* splotchMesh;
 		TestMaterial* splotchMaterial;

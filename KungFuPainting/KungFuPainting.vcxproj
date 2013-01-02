@@ -95,11 +95,13 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\poc\PaintParticleMesh.cpp" />
     <ClCompile Include="src\poc\SimplePaintLogic.cpp" />
     <ClCompile Include="src\poc\PlaneMesh.cpp" />
     <ClCompile Include="src\poc\Painting.cpp" />
     <ClCompile Include="src\poc\JointMesh.cpp" />
     <ClCompile Include="src\kinect\KinectMeshAnimator.cpp" />
+    <ClCompile Include="src\poc\ThrowPaintLogic.cpp" />
     <ClCompile Include="src\skeleton\SkeletonMeshController.cpp" />
     <ClCompile Include="src\poc\MonsterMaterial.cpp" />
     <ClCompile Include="src\io\MD5Parser.cpp" />
@@ -126,6 +128,7 @@
     <ClInclude Include="include\poc\JointMesh.h" />
     <ClInclude Include="include\core\math.h" />
     <ClInclude Include="include\kinect\KinectDepthDisplay.h" />
+    <ClInclude Include="include\poc\ThrowPaintLogic.h" />
     <ClInclude Include="include\render\DrawDepthMaterial.h" />
     <ClInclude Include="include\render\DrawRectMaterial.h" />
     <ClInclude Include="dx\WICTextureLoader.h" />
@@ -153,6 +156,7 @@
     <ClInclude Include="include\poc\JointPaintLogic.h" />
     <ClInclude Include="include\poc\SimplePaintLogic.h" />
     <ClInclude Include="include\poc\StickFigureMesh.h" />
+    <ClInclude Include="include\poc\PaintParticleMesh.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

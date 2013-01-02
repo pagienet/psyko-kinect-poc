@@ -34,6 +34,7 @@ namespace psyko
 	{ 
 		MeshInstance::SetTransformMatrix(matrix);
 		XMStoreFloat4x4(&inverseTransformMatrix, XMMatrixInverse(0, XMLoadFloat4x4(&matrix)));
+		z = matrix(3, 2);
 	}
 
 	void Painting::Render(ID3D11DeviceContext* deviceContext)
